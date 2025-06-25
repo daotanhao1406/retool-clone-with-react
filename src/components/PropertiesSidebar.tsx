@@ -19,8 +19,8 @@ export default function PropertiesSidebar({
   onUpdateComponent,
   onDeselectComponent,
 }: PropertiesSidebarProps) {
-  const [formData, setFormData] = useState({});
-  const [activeTab, setActiveTab] = useState<"url" | "upload">("url");
+  const [formData, setFormData] = useState<Record<string, any>>({});
+  const [activeTab, setActiveTab] = useState<string>("url");
 
   useEffect(() => {
     if (selectedComponent) {
@@ -128,7 +128,7 @@ export default function PropertiesSidebar({
               <div className="flex items-center justify-between">
                 <Tabs
                   defaultValue={activeTab}
-                  onChange={(e) => setActiveTab(e.target.value)}
+                  onValueChange={(e) => setActiveTab(e)}
                   className="flex w-full flex-1"
                 >
                   <div className="flex items-center justify-between flex-1">
