@@ -65,7 +65,8 @@ export default function MainCanvas({
               ref={provided.innerRef}
               {...provided.droppableProps}
               className={`drop-zone bg-white rounded-lg border-2 border-dashed border-neutral-300 p-8 min-h-full ${
-                components.length === 0 && "flex items-center justify-center"
+                components.length === 0 &&
+                "flex flex-col items-center justify-center"
               } transition-all duration-200 ${
                 snapshot.isDraggingOver ? "border-primary bg-blue-50" : ""
               }`}

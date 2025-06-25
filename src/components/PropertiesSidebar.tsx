@@ -45,7 +45,7 @@ export default function PropertiesSidebar({
     }, 500);
 
     return () => clearTimeout(timer);
-  }, [formData]);
+  }, [formData, selectedComponent, onUpdateComponent]);
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
